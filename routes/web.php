@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,14 +15,16 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('tryblade.child');
 });
 
-Route::get('/user/{name?}', function ($name = null){
-    return "hai ".$name;
-});
+// Route::resources('/post', [PostController::class, 'index']);
 
-Route::view('/hello', 'hello', ['name' => 'Layung']);
+// Route::get('/user/{name?}', function ($name = null){
+//     return "hai ".$name;
+// });
+
+// Route::view('/hello', 'hello', ['name' => 'Layung']);
 
 // Route::view('/hello', 'hello'); //persingkat
 
