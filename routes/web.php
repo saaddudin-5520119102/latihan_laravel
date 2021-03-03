@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('tryblade.child');
+    return view('welcome');
 });
 
 // Route::resources('/post', [PostController::class, 'index']);
@@ -34,3 +34,5 @@ Route::get('/', function () {
 
 // Route::view('/hello','/hello');
 // Route::redirect('/','/hello');
+
+Route::view('/try', 'tryblade.child');
