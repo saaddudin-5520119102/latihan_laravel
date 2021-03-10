@@ -36,3 +36,9 @@ Route::get('/', function () {
 // Route::redirect('/','/hello');
 
 Route::view('/try', 'tryblade.child');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('/buku', [App\Http\Controllers\HomeController::class, 'buku'])->name('buku');
